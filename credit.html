@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>탄소 크레딧</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow-sm border-b">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center space-x-2">
+          <div class="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center text-white">🌿</div>
+          <a href="./dashboard.html" class="text-2xl font-bold text-gray-900">CodeNZero</a>
+        </div>
+        <div class="flex items-center space-x-6">
+          <a href="./codeAnalysis.html" class="text-gray-600 hover:text-green-600 font-medium">Code Analysis</a>
+          <a href="./reports.html" class="text-gray-600 hover:text-green-600 font-medium">Reports</a>
+          <a href="./credit.html" class="text-gray-600 hover:text-green-600 font-medium">Credits</a>
+          <a href="#" class="text-gray-600 hover:text-green-600 font-medium">Settings</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-8">
+    <!-- Header Section -->
+    <div class="text-center mb-12">
+      <div class="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-4">
+        <svg class="w-8 h-8 text-green-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
+      </div>
+      <h1 class="text-4xl font-bold text-gray-900 mb-3">탄소 크레딧</h1>
+      <p class="text-xl text-gray-600 max-w-2xl mx-auto">디지털 탄소 발자국 절감을 추적하고 거래 가능한 크레딧을 획득하세요</p>
+    </div>
+
+    <!-- MVP Notice -->
+    <!-- <div class="bg-gradient-to-r from-blue-50 to-indigo-50 border border-blue-200 rounded-xl p-6 mb-8">
+      <div class="flex items-center justify-center space-x-3">
+        <svg class="h-6 w-6 text-blue-600" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M13 16h-1v-4h-1m1-4h.01M12 2a10 10 0 110 20 10 10 0 010-20z"/></svg>
+        <div class="text-center">
+          <h3 class="text-lg font-semibold text-blue-800 mb-1">MVP 단계 - 미리보기 모드</h3>
+          <p class="text-blue-700">탄소 크레딧은 추정치이며, 공식 검증 및 거래 기능은 곧 제공될 예정입니다.</p>
+        </div>
+      </div>
+    </div> -->
+
+    <!-- Key Metrics Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+      <!-- Total Credits -->
+      <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+        <div class="bg-gradient-to-r from-green-500 to-emerald-600 p-6 text-white">
+          <div class="flex items-center justify-between">
+            <div class="text-4xl">🪙</div>
+            <div class="text-right">
+              <p class="text-green-100 text-sm font-medium">총 크레딧</p>
+              <p class="text-3xl font-bold">18.9</p>
+              <p class="text-green-100 text-sm">tCO₂e 절감</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 bg-green-50">
+          <div class="flex items-center text-green-800">
+            <span class="mr-2">📈</span>
+            <span class="text-sm font-medium">이번 달 +3.2 tCO₂e</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Estimated Value -->
+      <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+        <div class="bg-gradient-to-r from-blue-500 to-blue-600 p-6 text-white">
+          <div class="flex items-center justify-between">
+            <div class="text-4xl">💲</div>
+            <div class="text-right">
+              <p class="text-blue-100 text-sm font-medium">시장 가치</p>
+              <p class="text-3xl font-bold">$94</p>
+              <p class="text-blue-100 text-sm">tCO₂e당 $5 기준</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 bg-blue-50">
+          <div class="flex items-center text-blue-800">
+            <span class="mr-2">🏆</span>
+            <span class="text-sm font-medium">검증 완료</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Performance -->
+      <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+        <div class="bg-gradient-to-r from-purple-500 to-purple-600 p-6 text-white">
+          <div class="flex items-center justify-between">
+            <div class="text-4xl">📊</div>
+            <div class="text-right">
+              <p class="text-purple-100 text-sm font-medium">이번 달</p>
+              <p class="text-3xl font-bold">+68%</p>
+              <p class="text-purple-100 text-sm">지난달 대비</p>
+            </div>
+          </div>
+        </div>
+        <div class="p-4 bg-purple-50">
+          <div class="flex items-center text-purple-800">
+            <span class="mr-2">📈</span>
+            <span class="text-sm font-medium">상승세 유지 중</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Recent Transactions Example -->
+    <div class="mt-12 bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+      <div class="px-8 py-6 border-b border-gray-100 bg-gray-50">
+        <h2 class="text-2xl font-bold text-gray-900">최근 크레딧 거래</h2>
+        <p class="text-gray-600 mt-1">가장 최근의 탄소 크레딧 획득 내역입니다</p>
+      </div>
+      <div class="divide-y divide-gray-100">
+        <div class="p-6 hover:bg-gray-50 transition-colors">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center space-x-4">
+              <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">✔️</div>
+              <div>
+                <h4 class="font-semibold text-gray-900 text-lg">+3.2 tCO₂e</h4>
+                <p class="text-gray-600 font-medium">데이터베이스 쿼리 최적화</p>
+                <p class="text-sm text-gray-500 mt-1">2024-01-20</p>
+              </div>
+            </div>
+            <div class="text-right">
+              <p class="text-xl font-bold text-green-600">$16.00</p>
+              <span class="inline-flex px-3 py-1 rounded-full text-xs font-semibold bg-green-100 text-green-800">
+                ✓ 검증 완료
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>

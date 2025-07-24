@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>CodeNZero 대시보드</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="bg-gray-50 min-h-screen">
+
+  <!-- Navigation -->
+  <nav class="bg-white shadow-sm border-b">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="flex justify-between h-16">
+        <div class="flex items-center space-x-2">
+          <div class="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center text-white">🌿</div>
+          <a href="./dashboard.html" class="text-2xl font-bold text-gray-900">CodeNZero</a>
+        </div>
+        <div class="flex items-center space-x-6">
+          <a href="./codeAnalysis.html" class="text-gray-600 hover:text-green-600 font-medium">Code Analysis</a>
+          <a href="./reports.html" class="text-gray-600 hover:text-green-600 font-medium">Reports</a>
+          <a href="./credit.html" class="text-gray-600 hover:text-green-600 font-medium">Credits</a>
+          <a href="#" class="text-gray-600 hover:text-green-600 font-medium">Settings</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="max-w-7xl mx-auto px-6 lg:px-8 py-8">
+    <!-- Header -->
+    <div class="mb-8 flex justify-between items-center">
+      <div>
+        <h2 class="text-4xl font-bold text-gray-900">대시보드</h2>
+        <p class="text-lg text-gray-600 mt-2">탄소 발자국과 최적화 진행 상황을 모니터링하세요</p>
+      </div>
+      <div class="flex items-center space-x-2 bg-green-50 px-4 py-2 rounded-lg">
+        <span class="text-green-600 text-sm">📅</span>
+        <span class="text-green-700 font-medium">2025년 7월</span>
+      </div>
+    </div>
+
+    <!-- Grid Layout -->
+    <div class="grid grid-cols-12 gap-8">
+      <!-- Left Column -->
+      <div class="col-span-12 lg:col-span-4 space-y-6">
+
+        <!-- Project Info -->
+        <div class="bg-white rounded-xl shadow-sm border p-6 space-y-4">
+          <h3 class="text-lg font-semibold">프로젝트 정보</h3>
+          <p class="text-sm text-gray-500">Site 1, Heng Yen, 베트남</p>
+          <p class="text-sm text-gray-500">프로젝트 명</p>
+          <p class="font-medium text-gray-900">휴머스 무연소 토양 벽돌</p>
+          <div class="grid grid-cols-2 gap-4">
+            <div>
+              <p class="text-sm text-gray-500">프로젝트 기간</p>
+              <p class="text-gray-800 font-medium">28년 ~ 34년</p>
+            </div>
+            <div>
+              <p class="text-sm text-gray-500">감축 유형</p>
+              <p class="text-gray-800 font-medium">킬른 공정</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Method -->
+        <div class="bg-white rounded-xl shadow-sm border p-6">
+          <h3 class="text-lg font-semibold mb-2">방법론</h3>
+          <p class="font-semibold">CDM AMS.III.Z. ver.6.0</p>
+          <p class="text-sm text-gray-600">벽돌 제조 시 연료 전환 및 효율화</p>
+        </div>
+
+        <!-- Electricity Usage with Donut Chart -->
+        <div class="bg-white rounded-xl shadow-sm border p-6 text-center">
+          <h3 class="text-lg font-semibold mb-2">전력 사용량</h3>
+          <p class="text-xl font-bold mb-1">2025년 7월</p>
+          <p class="text-red-600 font-medium">입력된 데이터 없음</p>
+
+          <!-- Donut Chart -->
+          <div class="flex flex-col items-center mt-6">
+            <canvas id="emissionChart" width="200" height="200"></canvas>
+            <div class="flex justify-center gap-4 mt-4 text-xs text-gray-700">
+              <div class="flex items-center gap-1"><span class="w-3 h-3 rounded-full bg-red-500"></span> 컴퓨팅</div>
+              <div class="flex items-center gap-1"><span class="w-3 h-3 rounded-full bg-orange-500"></span> 저장소</div>
+              <div class="flex items-center gap-1"><span class="w-3 h-3 rounded-full bg-yellow-400"></span> 네트워크</div>
+              <div class="flex items-center gap-1"><span class="w-3 h-3 rounded-full bg-green-500"></span> 기타</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column -->
+      <div class="col-span-12 lg:col-span-8 space-y-6">
+        <!-- Metrics -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-green-600 text-white p-6 rounded-xl">
+            <p class="text-sm">총 탄소 절감량</p>
+            <p class="text-3xl font-bold">38 kg CO₂</p>
+            <p class="text-sm mt-2">▼ 이번 달 12%</p>
+          </div>
+          <div class="bg-blue-600 text-white p-6 rounded-xl">
+            <p class="text-sm">비용 절감액</p>
+            <p class="text-3xl font-bold">$250</p>
+            <p class="text-sm mt-2">▼ 이번 달 15%</p>
+          </div>
+          <div class="bg-purple-600 text-white p-6 rounded-xl">
+            <p class="text-sm">최적화 수</p>
+            <p class="text-3xl font-bold">23건</p>
+            <p class="text-sm mt-2">이번 주 5건</p>
+          </div>
+        </div>
+
+        <!-- Project Progress -->
+        <div class="bg-white rounded-xl border shadow-sm p-6">
+          <h3 class="text-xl font-semibold mb-2">프로젝트 진행률</h3>
+          <p class="text-sm text-gray-500">주요 데이터 (벽돌 수량): <strong>1,120</strong></p>
+          <div class="mt-4">
+            <p class="text-sm text-gray-500 mb-1">감축 목표:</p>
+            <p class="text-blue-600 font-bold text-xl">2,539 tCO2-eq</p>
+            <p class="text-gray-700 text-sm">현재: 1,028 tCO2-eq (41%)</p>
+            <div class="w-full bg-gray-200 rounded-full h-4 mt-2">
+              <div class="bg-blue-600 h-4 rounded-full" style="width: 41%"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Data -->
+        <div class="bg-white rounded-xl border shadow-sm p-6">
+          <h3 class="text-xl font-semibold mb-4">프로젝트 데이터</h3>
+          <ul class="space-y-3 text-sm">
+            <li class="flex justify-between"><span>API 서버</span><span>45 kg CO₂ / 효율 85%</span></li>
+            <li class="flex justify-between"><span>프론트엔드</span><span>25 kg CO₂ / 효율 92%</span></li>
+            <li class="flex justify-between"><span>데이터베이스</span><span>35 kg CO₂ / 효율 78%</span></li>
+            <li class="flex justify-between"><span>워커</span><span>20 kg CO₂ / 효율 88%</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Chart.js Script -->
+  <script>
+    const ctx = document.getElementById('emissionChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'doughnut',
+      data: {
+        labels: ['컴퓨팅', '저장소', '네트워크', '기타'],
+        datasets: [{
+          label: '배출원',
+          data: [45, 25, 20, 10],
+          backgroundColor: ['#ef4444', '#f97316', '#eab308', '#22c55e'],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: false,
+        plugins: {
+          legend: {
+            display: false
+          }
+        },
+        cutout: '60%'
+      }
+    });
+  </script>
+</body>
+</html>

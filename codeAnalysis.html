@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeNZero 코드 분석</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Add any custom styles if necessary that aren't covered by Tailwind */
+    </style>
+</head>
+<body>
+    <div class="min-h-screen bg-gradient-to-br from-gray-50 to-white">
+        <nav class="bg-white shadow-sm border-b">
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+              <div class="flex justify-between h-16">
+                <div class="flex items-center space-x-2">
+                  <div class="w-8 h-8 bg-green-600 rounded-lg flex items-center justify-center text-white">🌿</div>
+                  <a href="./dashboard.html" class="text-2xl font-bold text-gray-900">CodeNZero</a>
+                </div>
+                <div class="flex items-center space-x-6">
+                  <a href="./codeAnalysis.html" class="text-gray-600 hover:text-green-600 font-medium">Code Analysis</a>
+                  <a href="./reports.html" class="text-gray-600 hover:text-green-600 font-medium">Reports</a>
+                  <a href="./credit.html" class="text-gray-600 hover:text-green-600 font-medium">Credits</a>
+                  <a href="#" class="text-gray-600 hover:text-green-600 font-medium">Settings</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8 py-8">
+            <div class="text-center mb-12">
+                <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-full mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-8 h-8 text-blue-600"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                </div>
+                <h1 class="text-4xl font-bold text-gray-900 mb-3">코드 분석</h1>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                    AI 기반 인사이트로 코드 성능과 지속 가능성을 최적화하세요
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-red-600"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                        </div>
+                        <span class="text-2xl font-bold text-red-600">1</span>
+                    </div>
+                    <h3 class="font-semibold text-gray-900">심각한 이슈</h3>
+                    <p class="text-sm text-gray-600">높은 우선순위의 수정 필요</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-orange-600"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                        </div>
+                        <span class="text-2xl font-bold text-orange-600">2</span>
+                    </div>
+                    <h3 class="font-semibold text-gray-900">중간 이슈</h3>
+                    <p class="text-sm text-gray-600">중간 영향도의 항목</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-green-600"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                        </div>
+                        <span class="text-2xl font-bold text-green-600">23.6</span>
+                    </div>
+                    <h3 class="font-semibold text-gray-900">CO₂ 절감 잠재량</h3>
+                    <p class="text-sm text-gray-600">월별 절감량 (kg)</p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-6">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 text-blue-600"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                        </div>
+                        <span class="text-2xl font-bold text-blue-600">$15</span>
+                    </div>
+                    <h3 class="font-semibold text-gray-900">비용 절감</h3>
+                    <p class="text-sm text-gray-600">월별 절감 가능액</p>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg border border-gray-100 mb-8">
+                <div class="p-6 border-b border-gray-100">
+                    <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+                        <div class="flex flex-col sm:flex-row gap-4">
+                            <div class="relative">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                                <input type="text" placeholder="이슈 또는 파일 검색..." value="" class="pl-10 pr-4 py-3 w-80 border border-gray-200 rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                            </div>
+
+                            <div class="flex items-center space-x-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-gray-400"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+                                <select class="border border-gray-200 rounded-xl px-4 py-3 focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                                    <option value="all">모든 심각도</option>
+                                    <option value="high">높은 우선순위</option>
+                                    <option value="medium">중간 우선순위</option>
+                                    <option value="low">낮은 우선순위</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-6">
+                            <div class="flex items-center space-x-2">
+                                <div class="w-4 h-4 bg-red-500 rounded-full"></div>
+                                <span class="text-sm font-medium text-gray-700">심각 1개</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-4 h-4 bg-orange-500 rounded-full"></div>
+                                <span class="text-sm font-medium text-gray-700">중간 2개</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-4 h-4 bg-blue-500 rounded-full"></div>
+                                <span class="text-sm font-medium text-gray-700">낮음 1개</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="divide-y divide-gray-100">
+                    <div class="p-6 hover:bg-gray-50 transition-colors">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-red-600"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                            </div>
+
+                            <div class="flex-1 min-w-0">
+                                <div class="flex items-center space-x-3 mb-3">
+                                    <h3 class="text-xl font-bold text-gray-900">비효율적인 데이터베이스 쿼리</h3>
+                                    <span class="px-3 py-1 rounded-full text-xs font-bold border text-red-700 bg-red-100 border-red-200">
+                                        높음
+                                    </span>
+                                    <div class="flex items-center space-x-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-yellow-600"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                                        <span class="text-sm font-medium text-gray-600 capitalize">성능</span>
+                                    </div>
+                                </div>
+
+                                <p class="text-gray-700 mb-4 text-lg">사용자 데이터 조회에서 N+1 쿼리 문제 감지됨</p>
+
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                                    <div class="flex items-center space-x-2 text-gray-600">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><path d="M9 18l3-3l3 3"></path><path d="M12 15v4"></path></svg>
+                                        <span class="font-mono text-sm">src/api/users.ts:45</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2 text-green-700">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                                        <span class="font-semibold">월 12.5 kg CO₂</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2 text-blue-700">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                                        <span class="font-semibold">월 $8.30</span>
+                                    </div>
+                                </div>
+
+                                <div class="bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-xl p-4 mb-4">
+                                    <div class="flex items-start space-x-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-green-600 mt-0.5"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1.3.5 2.6 1.5 3.5.8.8 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M12 22v-4"></path></svg>
+                                        <div>
+                                            <h4 class="font-semibold text-green-800 mb-1">AI 추천</h4>
+                                            <p class="text-green-700">JOIN 또는 Eager Loading을 사용하여 쿼리 수를 줄이세요</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center space-x-4">
+                                    <button class="inline-flex items-center px-4 py-2 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors">
+                                        상세 보기
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 h-4 w-4"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                    </button>
+                                    <button class="inline-flex items-center px-4 py-2 bg-gray-100 text-gray-700 font-medium rounded-lg hover:bg-gray-200 transition-colors">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 h-4 w-4"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                        댓글
+                                    </button>
+                                    <button class="text-blue-600 hover:text-blue-700 font-medium">
+                                        진행 중으로 표시
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="flex-shrink-0 text-right">
+                                <div class="flex items-center text-sm text-gray-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 mr-1"><line x1="10" y1="2" x2="14" y2="2"></line><line x1="12" y1="14" x2="12" y2="22"></line><path d="M20 9v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9"></path><path d="M4 13h16"></path></svg>
+                                    2024-01-15
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 hover:bg-gray-50 transition-colors">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-orange-600"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            </div>
+
+                            <div class="flex-1 min-w-0">
+                                <div class="flex items-center space-x-3 mb-3">
+                                    <h3 class="text-xl font-bold text-gray-900">이벤트 리스너의 메모리 누수</h3>
+                                    <span class="px-3 py-1 rounded-full text-xs font-bold border text-orange-700 bg-orange-100 border-orange-200">
+                                        중간
+                                    </span>
+                                    <div class="flex items-center space-x-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-purple-600"><rect x="2" y="2" width="20" height="20" rx="2" ry="2"></rect><path d="M6 18H6.01"></path><path d="M10 18H10.01"></path><path d="M14 18H14.01"></path><path d="M18 18H18.01"></path><path d="M6 6H6.01"></path><path d="M10 6H10.01"></path><path d="M14 6H14.01"></path><path d="M18 6H18.01"></path><path d="M18 10H18.01"></path><path d="M18 14H18.01"></path><path d="M6 10H6.01"></path><path d="M6 14H6.01"></path></svg>
+                                        <span class="text-sm font-medium text-gray-600 capitalize">메모리</span>
+                                    </div>
+                                </div>
+
+                                <p class="text-gray-700 mb-4 text-lg">컴포넌트 unmount 시 이벤트 리스너가 제대로 제거되지 않음</p>
+
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                                    <div class="flex items-center space-x-2 text-gray-600">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><path d="M9 18l3-3l3 3"></path><path d="M12 15v4"></path></svg>
+                                        <span class="font-mono text-sm">src/components/Chart.tsx:23</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2 text-green-700">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                                        <span class="font-semibold">월 5.2 kg CO₂</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2 text-blue-700">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                                        <span class="font-semibold">월 $3.10</span>
+                                    </div>
+                                </div>
+
+                                <div class="bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-xl p-4 mb-4">
+                                    <div class="flex items-start space-x-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-green-600 mt-0.5"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1.3.5 2.6 1.5 3.5.8.8 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M12 22v-4"></path></svg>
+                                        <div>
+                                            <h4 class="font-semibold text-green-800 mb-1">AI 추천</h4>
+                                            <p class="text-green-700">useEffect의 return 부분에 cleanup 함수를 추가하세요</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center space-x-4">
+                                    <button class="inline-flex items-center px-4 py-2 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors">
+                                        상세 보기
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 h-4 w-4"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                    </button>
+                                    <button class="inline-flex items-center px-4 py-2 bg-gray-100 text-gray-700 font-medium rounded-lg hover:bg-gray-200 transition-colors">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 h-4 w-4"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                        댓글
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="flex-shrink-0 text-right">
+                                <div class="flex items-center text-sm text-gray-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 mr-1"><line x1="10" y1="2" x2="14" y2="2"></line><line x1="12" y1="14" x2="12" y2="22"></line><path d="M20 9v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9"></path><path d="M4 13h16"></path></svg>
+                                    2024-01-14
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-6 hover:bg-gray-50 transition-colors">
+                        <div class="flex items-start space-x-4">
+                            <div class="flex-shrink-0 mt-1">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-6 w-6 text-blue-600"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                            </div>
+
+                            <div class="flex-1 min-w-0">
+                                <div class="flex items-center space-x-3 mb-3">
+                                    <h3 class="text-xl font-bold text-gray-900">과도하게 큰 번들 사이즈</h3>
+                                    <span class="px-3 py-1 rounded-full text-xs font-bold border text-blue-700 bg-blue-100 border-blue-200">
+                                        낮음
+                                    </span>
+                                    <div class="flex items-center space-x-1">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-green-600"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                                        <span class="text-sm font-medium text-gray-600 capitalize">에너지</span>
+                                    </div>
+                                </div>
+
+                                <p class="text-gray-700 mb-4 text-lg">큰 라이브러리를 가져왔지만 일부만 사용 중</p>
+
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                                    <div class="flex items-center space-x-2 text-gray-600">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><path d="M9 18l3-3l3 3"></path><path d="M12 15v4"></path></svg>
+                                        <span class="font-mono text-sm">src/utils/helpers.ts:5</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2 text-green-700">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                                        <span class="font-semibold">월 2.1 kg CO₂</span>
+                                    </div>
+                                    <div class="flex items-center space-x-2 text-blue-700">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                                        <span class="font-semibold">월 $1.50</span>
+                                    </div>
+                                </div>
+
+                                <div class="bg-gradient-to-r from-green-50 to-blue-50 border border-green-200 rounded-xl p-4 mb-4">
+                                    <div class="flex items-start space-x-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-green-600 mt-0.5"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1.3.5 2.6 1.5 3.5.8.8 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M12 22v-4"></path></svg>
+                                        <div>
+                                            <h4 class="font-semibold text-green-800 mb-1">AI 추천</h4>
+                                            <p class="text-green-700">트리 쉐이킹을 사용하거나 필요한 함수만 가져오세요</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center space-x-4">
+                                    <button class="inline-flex items-center px-4 py-2 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition-colors">
+                                        상세 보기
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="ml-2 h-4 w-4"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                                    </button>
+                                    <button class="inline-flex items-center px-4 py-2 bg-gray-100 text-gray-700 font-medium rounded-lg hover:bg-gray-200 transition-colors">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mr-2 h-4 w-4"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                        댓글
+                                    </button>
+                                    <button class="text-blue-600 hover:text-blue-700 font-medium">
+                                        진행 중으로 표시
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="flex-shrink-0 text-right">
+                                <div class="flex items-center text-sm text-gray-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-4 w-4 mr-1"><line x1="10" y1="2" x2="14" y2="2"></line><line x1="12" y1="14" x2="12" y2="22"></line><path d="M20 9v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V9"></path><path d="M4 13h16"></path></svg>
+                                    2024-01-12
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl shadow-lg text-white p-8">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 text-green-100 mb-4"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="6"></circle><circle cx="12" cy="12" r="2"></circle></svg>
+                    <h3 class="text-2xl font-bold mb-2">최적화 효과</h3>
+                    <div class="space-y-3">
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-100">CO₂ 절감량</span>
+                            <span class="text-2xl font-bold">월 23.6 kg</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-100">비용 절감</span>
+                            <span class="text-2xl font-bold">월 $15.10</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-green-100">성능</span>
+                            <span class="text-2xl font-bold">+28%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-lg border border-gray-100 p-8">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 text-blue-600 mb-4"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">최근 활동</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-green-600"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+                            <span class="text-gray-700">메모리 누수 수정됨</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-orange-600"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            <span class="text-gray-700">DB 분석 진행 중</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-5 w-5 text-red-600"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path><line x1="12" y1="9" x2="12" y2="13"></line><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
+                            <span class="text-gray-700">새로운 API 이슈 감지됨</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-r from-purple-500 to-indigo-600 rounded-2xl shadow-lg text-white p-8">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="h-12 w-12 text-purple-100 mb-4"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1.3.5 2.6 1.5 3.5.8.8 1.3 1.5 1.5 2.5"></path><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M12 22v-4"></path></svg>
+                    <h3 class="text-2xl font-bold mb-4">AI 인사이트</h3>
+                    <div class="space-y-3 text-purple-100">
+                        <p class="flex items-start space-x-2">
+                            <span>📈</span>
+                            <span>이번 주 효율 15% 개선</span>
+                        </p>
+                        <p class="flex items-start space-x-2">
+                            <span>🚀</span>
+                            <span>데이터 캐싱 구현을 고려해보세요</span>
+                        </p>
+                        <p class="flex items-start space-x-2">
+                            <span>⚡</span>
+                            <span>번들 최적화: 로딩 속도 20% 향상</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
